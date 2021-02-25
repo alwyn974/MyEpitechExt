@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "MyEpitech",
+  "version": "1.0",
+  "description": "Restore the old percentage of My Epitech !",
+  "permissions": ["webRequest", "webRequestBlocking", "*://my.epitech.eu/*"],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "app.js"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "64": "icon.png",
+    "128": "icon.png"
+  }
+}
