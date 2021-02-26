@@ -8,20 +8,7 @@ Restore the old design of https://my.epitech.eu
 
 ## How to install
 
-### Step 1 : Clone the repository
-
-```
-=> git clone https://github.com/alwyn974/MyEpitechExt.git
-```
-
-### Step 2 : Load the unpacked extension
-
-#### Google Chrome
-
-- Paste "chrome://extensions/" in your url.
-
-- Activate Developer Mode
-
-- Load the folder MyEpitechExt with "Load unpacked".
+- Chrome: <br> 
+  => Just add it to chrome from the [store](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb/related?hl=fr)
 
 > :bulb: Don't forget to put a star on the project to support the project
