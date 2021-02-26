@@ -25,6 +25,7 @@ Restore the old design of https://my.epitech.eu
 	</li>
     <li>Firefox
 		<ul>
+            <li><pre>git clone https://github.com/alwyn974/MyEpitechExt.git</pre></li>
 			<li> Go to <a href="about:debugging#/runtime/this-firefox">"about:debugging#/runtime/this-firefox"</a> </li>
 			<li> Load Temporary Add-on</li>
             <li> Load the folder MyEpitechExt</li>
