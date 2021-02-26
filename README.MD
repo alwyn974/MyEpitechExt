@@ -6,6 +6,7 @@ Restore the old design of https://my.epitech.eu
 
 - Google Chrome
 - Android
+- Firefox
 
 ## How to install
 
@@ -20,6 +21,13 @@ Restore the old design of https://my.epitech.eu
 		<ul>
 			<li> Install Kiwi Browser from the PlayStore or other store</li>
 			<li> And Just add it to chrome from the <a href="https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb/related?hl=fr">store</a></li>
+		</ul>
+	</li>
+    <li>Firefox
+		<ul>
+			<li> Go to <a href="about:debugging#/runtime/this-firefox">"about:debugging#/runtime/this-firefox"</a> </li>
+			<li> Load Temporary Add-on</li>
+            <li> Load the folder MyEpitechExt</li>
 		</ul>
 	</li>
 </ul>
