@@ -6,8 +6,8 @@ WARNING ! <br>
 The extension is in <u>V2-ALPHA</u> v2 only works with github repo and for now only add a percentage in text (no progress bar)
 </h2>
 
-![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)
-![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
 [![](https://img.shields.io/badge/License-GPL--3.0-brightgreen.svg?style=for-the-badge)](https://github.com/alwyn974/MyEpitechExt/blob/main/LICENSE)
 
 <br><strong> Restore the old design of https://my.epitech.eu </strong></p>
