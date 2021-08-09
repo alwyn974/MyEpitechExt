@@ -1,15 +1,9 @@
-chrome.webRequest.onBeforeRequest.addListener(
-    function (info) {
-        if (info.url === "https://my.epitech.eu/app.js") {
-            console.log("[MyEpitechExt] %s intercepted redirect it", info.url);
-            return {redirectUrl: chrome.extension.getURL("app.js")}
-        }
-    },
-    {
-        urls: [
-            "https://my.epitech.eu/*"
-        ],
-        types: ["script"]
-    },
-    ["blocking"]
-);
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    if (changeInfo.url) {
+        console.log("[MyEpitechExt] %s intercepted, send refresh message", changeInfo.url);
+        chrome.tabs.sendMessage(tabId, {
+            message: "refresh",
+            url: changeInfo.url,
+        });
+    }
+});

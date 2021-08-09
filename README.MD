@@ -1,5 +1,10 @@
 <div align="center">
-    <h1>Web Extension MyEpitech v1.0</h1>
+    <h1>Web Extension MyEpitech v2.0-ALPHA</h1>
+
+<h2>
+WARNING ! <br>
+The extension is in <u>V2-ALPHA</u> v2 only works with github repo and for now only add a percentage in text (no progress bar)
+</h2>
 
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)
 ![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)
