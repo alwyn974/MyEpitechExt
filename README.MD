@@ -1,10 +1,5 @@
 <div align="center">
-    <h1>Web Extension MyEpitech v2.0-ALPHA</h1>
-
-<h2>
-WARNING ! <br>
-The extension is in <u>V2-ALPHA</u> v2 only works with github repo and for now only add a percentage in text (no progress bar)
-</h2>
+    <h1>Web Extension MyEpitech v2.0</h1>
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
@@ -13,6 +8,17 @@ The extension is in <u>V2-ALPHA</u> v2 only works with github repo and for now o
 <br><strong> Restore the old design of https://my.epitech.eu </strong></p>
 
 </div>
+
+## Images
+
+- Year display
+  ![Year](https://i.imgur.com/uZxaDVa.png)
+- Module display
+  ![Year](https://i.imgur.com/xMWFH10.png)
+- Project display
+  ![Year](https://i.imgur.com/mkqWuHQ.png)
+- Details display
+  ![Year](https://i.imgur.com/Fz20aHD.png)
 
 ## Working On:
 

@@ -13,9 +13,6 @@
   },
   "content_scripts": [
     {
-      "css": [
-        "style.css"
-      ],
       "js": [
         "script.js"
       ],

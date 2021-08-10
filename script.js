@@ -20,6 +20,7 @@ const types = {
 let type = null;
 let hasBeenFixed = false; //used for blocking multiple override
 let elements = []; //all elements added
+let modifiedElements = [];
 
 /**
  * Function to print on the console
@@ -137,18 +138,6 @@ const retrieveData = async () => {
 }
 
 /**
- * Util function to insert dom element
- * @param newNode the dom element
- * @param referenceNode the parent
- */
-const insertAfter = (newNode, referenceNode) => {
-    if (referenceNode) {
-        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-        elements.push(newNode);
-    }
-}
-
-/**
  * Get the percentage value
  * @param project the project
  * @returns {string} the percentage
@@ -181,23 +170,6 @@ const getPercentage = (project) => {
 }
 
 /**
- * Find element from text value with {@link document.evaluate}
- * @param tag the tag (span, div etc)
- * @param text the text value
- * @param xpathType the type of xpath
- * @returns {XPathResult}
- */
-const findElementByText = (tag, text, xpathType) => {
-    let expression = text.includes('"') ? `//${tag}[text()='${text}']` : `//${tag}[text()="${text}"]`; //TODO fix this for french project (example: "Le mode d'emploi")
-    try {
-        return document.evaluate(expression, document, null, xpathType, null);
-    } catch (e) {
-        epiLog("Error on finding element from text !\n" + e, "error");
-    }
-    return null;
-};
-
-/**
  * Check if the mdl-grid exist
  * @returns {boolean}
  */
@@ -217,11 +189,70 @@ const sleep = (ms) => {
 }
 
 /**
- * Fix the module and project page
+ * Get the color from percentage
+ * @param percentage the percentage
+ * @returns {string} the color in string
+ */
+const getColor = (percentage) => {
+    if (percentage < 25)
+        return "red";
+    else if (percentage < 75)
+        return "orange"
+    else
+        return "limegreen";
+}
+
+/**
+ * Return a progress bar
+ * @param name name of the project for debug
+ * @param percentage the percentage
+ * @returns {HTMLDivElement} simple progress bar taken from mdl :)
+ */
+const getProgressBar = (name, percentage) => {
+    epiLog(name + " " + percentage + "%");
+
+    let div = document.createElement("div");
+    div.className = "mdl-progress";
+    div.style.height = "20px";
+    div.style.margin = "5px auto";
+
+    let text = document.createElement("div");
+    text.className = "bar";
+    text.innerHTML = percentage + "%";
+    text.style.color = "black";
+    text.style.zIndex = "2";
+    text.style.width = "100%";
+    text.style.fontSize = "smaller";
+    text.style.margin = "2px";
+
+    let fgDiv = document.createElement("div");
+    fgDiv.className = "bar";
+    fgDiv.style.width = percentage + "%";
+    fgDiv.style.backgroundColor = getColor(percentage);
+    fgDiv.style.zIndex = "1";
+    fgDiv.style.borderRadius = "10px";
+
+    let bgDiv = document.createElement("div");
+    bgDiv.className = "bar";
+    bgDiv.style.backgroundColor = getColor(percentage);
+    bgDiv.style.zIndex = "0";
+    bgDiv.style.borderRadius = "10px";
+    bgDiv.style.opacity = "30%";
+    bgDiv.style.width = "100%";
+
+    div.appendChild(text);
+    div.appendChild(fgDiv);
+    div.appendChild(bgDiv);
+
+    return div;
+}
+
+/**
+ * Fix the year, module and project page
  * @param projects all the projects
  * @returns {void}
  */
-const tempFix = (projects) => {
+const fixPercentage = (projects) => {
     let mdlGridSelector = document.querySelectorAll("main > div.mdl-grid");
     if (mdlGridSelector.length === 0) {
         epiLog("Mdl grid is empty !", "warn");
@@ -234,12 +265,10 @@ const tempFix = (projects) => {
     }
     for (let i = 0; i < mdlGrid.childNodes.length; i++) {
         let percentage = getPercentage(projects[i]);
-        epiLog(projects[i].project.name + " " + percentage + "%");
-        let span = document.createElement("span");
-        span.innerHTML = percentage + "%";
-        span.classList.add("mdl-typography--text-left", "mdl-cell--2-col-phone", "mdl-cell--4-col-tablet", "mdl-cell--6-col-desktop");
-        let card = mdlGrid.childNodes[i];
-        insertAfter(span, card?.childNodes[0]?.childNodes[0]?.childNodes[0]?.childNodes[0]);
+        let div = getProgressBar(projects[i].project.name, percentage);
+        let textTitle = mdlGrid.childNodes[i]?.childNodes[0]?.childNodes[1]?.childNodes[0]?.childNodes[0];
+        textTitle.appendChild(div);
+        elements.push(div);
     }
 }
 
@@ -249,15 +278,17 @@ const tempFix = (projects) => {
  * @returns {void}
  */
 const fixDetails = (project) => {
-    let card = findElementByText("span", project.instance.projectName, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
-    if (card === null || card.snapshotLength !== 1)
-        return epiLog("Project not found or there are more than one card for this project !", "warn");
+    let mdlGridSelector = document.querySelectorAll("main > div.mdl-grid");
+    if (mdlGridSelector.length === 0) {
+        epiLog("Mdl grid is empty !", "warn");
+        return;
+    }
+    let mdlGrid = mdlGridSelector[0];
     let percentage = getPercentage(project);
-    epiLog(project.instance.projectName + " " + percentage + "%");
-    let span = document.createElement("span");
-    span.innerHTML = percentage + "%";
-    span.classList.add("mdl-typography--text-right");
-    insertAfter(span, card.snapshotItem(0));
+    let div = getProgressBar(project.instance.projectName, percentage);
+    let textTitle = mdlGrid.childNodes[0]?.childNodes[1]?.childNodes[0];
+    textTitle.appendChild(div);
+    elements.push(div);
 }
 
 /**
@@ -278,7 +309,7 @@ const fixMyEpitech = async () => {
         epiLog(projects, "json");
 
         if (type !== types.DETAILS)
-            tempFix(projects);
+            fixPercentage(projects);
         else
             fixDetails(projects);
     } catch (e) {
