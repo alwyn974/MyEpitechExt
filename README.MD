@@ -43,10 +43,7 @@
 	</li>
     <li>Firefox
 		<ul>
-            <li><pre>git clone https://github.com/alwyn974/MyEpitechExt.git</pre></li>
-			<li> Go to <a href="about:debugging#/runtime/this-firefox">"about:debugging#/runtime/this-firefox"</a> </li>
-			<li> Load Temporary Add-on</li>
-            <li> Load the folder MyEpitechExt</li>
+            <li> Just add it to firefox from the <a href="https://addons.mozilla.org/en-GB/firefox/addon/myepitech/">store</a></li>
 		</ul>
 	</li>
 </ul>
