@@ -20,7 +20,6 @@ const types = {
 let type = null;
 let hasBeenFixed = false; //used for blocking multiple override
 let elements = []; //all elements added
-let modifiedElements = [];
 
 /**
  * Function to print on the console
@@ -156,9 +155,14 @@ const getPercentage = (project) => {
         }
     } else {
         for (let skill of skills) {
-            total_test += skill.FullSkillReport.tests.length;
-            for (let test of skill.FullSkillReport.tests)
-                passed_test += test.passed;
+            if (skill.BreakdownSkillReport === undefined) {
+                total_test += skill.FullSkillReport.tests.length;
+                for (let test of skill.FullSkillReport.tests)
+                    passed_test += test.passed;
+            } else {
+                total_test += skill.BreakdownSkillReport.breakdown.count;
+                passed_test += skill.BreakdownSkillReport.breakdown.passed;
+            }
         }
     }
 
