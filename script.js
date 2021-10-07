@@ -187,9 +187,9 @@ const checkGrid = () => {
  */
 const checkNoResult = () => {
     let mainGrid = document.querySelector("#elm-mdl-layout-main > div:nth-child(2) > div");
-    if (mainGrid === undefined)
+    if (mainGrid === undefined || mainGrid === null)
         return false;
-    return mainGrid.innerHTML === "No results";
+    return mainGrid?.innerHTML === "No results";
 }
 
 /**

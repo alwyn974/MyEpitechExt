@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Web Extension MyEpitech v2.2</h1>
+    <h1>Web Extension MyEpitech v2.3</h1>
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
