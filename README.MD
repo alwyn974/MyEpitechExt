@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Web Extension MyEpitech v2.1</h1>
+    <h1>Web Extension MyEpitech v2.2</h1>
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
@@ -14,11 +14,11 @@
 - Year display
   ![Year](https://i.imgur.com/uZxaDVa.png)
 - Module display
-  ![Year](https://i.imgur.com/xMWFH10.png)
+  ![Module](https://i.imgur.com/xMWFH10.png)
 - Project display
-  ![Year](https://i.imgur.com/mkqWuHQ.png)
+  ![Project](https://i.imgur.com/mkqWuHQ.png)
 - Details display
-  ![Year](https://i.imgur.com/Fz20aHD.png)
+  ![Details](https://i.imgur.com/Fz20aHD.png)
 
 ## Working On:
 

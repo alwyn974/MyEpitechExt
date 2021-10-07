@@ -182,6 +182,17 @@ const checkGrid = () => {
 }
 
 /**
+ * Check if the main layout content equals to <strong>No results</strong>
+ * @returns {boolean}
+ */
+const checkNoResult = () => {
+    let mainGrid = document.querySelector("#elm-mdl-layout-main > div:nth-child(2) > div");
+    if (mainGrid === undefined)
+        return false;
+    return mainGrid.innerHTML === "No results";
+}
+
+/**
  * A simple sleep function
  * @param ms time to sleep
  * @returns {Promise<void>}
@@ -301,8 +312,13 @@ const fixDetails = (project) => {
  */
 const fixMyEpitech = async () => {
     epiLog("Finish patching my.epitech.eu", "timeStart");
-    while (!checkGrid())
+    while (!checkGrid()) {
+        if (checkNoResult()) {
+            epiLog("No results found !");
+            return;
+        }
         await sleep(150);
+    }
 
     hasBeenFixed = true;
     type = getType();
