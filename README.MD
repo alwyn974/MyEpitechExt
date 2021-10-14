@@ -1,8 +1,9 @@
 <div align="center">
     <h1>Web Extension MyEpitech v2.3</h1>
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Chrome%20Stars&logo=brightgreen&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&label=Chrome%20Downloads&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Stars&color=brightgreen&logo=googlechrome&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&logo=googlechrome&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
+![Mozilla Add-on](https://img.shields.io/amo/users/myepitech?color=brightgreen&logo=firefox&style=for-the-badge)
 [![](https://img.shields.io/badge/License-GPL--3.0-brightgreen.svg?style=for-the-badge)](https://github.com/alwyn974/MyEpitechExt/blob/main/LICENSE)
 
 <br><strong> Restore the old design of https://my.epitech.eu </strong></p>
