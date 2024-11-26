@@ -70,12 +70,12 @@ let fetchData = async (url) => {
     try {
         epiLog("Fetching data from " + url);
         const result = fetch(url, {
-            method: "GET",
-            headers: {
-                'Content-Type': 'applications/json',
-                'Authorization': 'Bearer ' + localStorage.getItem("argos-api.oidc-token").replace(/"/g, "")
-            }
-        });
+          method: "GET",
+          headers: {
+              'Content-Type': 'applications/json',
+              'Authorization': 'Bearer ' + localStorage.getItem("argos-api.oidc-token").replace(/"/g, "")
+          }
+      });
         data = (await result).json();
     } catch (e) {
         epiLog(e, "error");
@@ -317,6 +317,46 @@ const fixError = (projects) => {
   }
 }
 
+const setDarkMode = () => {
+  const mainBody = document.getElementById('elm-mdl-layout-main');
+  const mdlCards = document.querySelectorAll('.mdl-card');
+  const errors = document.querySelectorAll('.mdl-list__item');
+  const bodyTitles = document.querySelectorAll('.mdl-color-text--black');
+  const headerTitles = document.querySelectorAll('.mdl-color-text--primary-dark');
+  const primaryTitles = document.querySelectorAll('.mdl-color-text--primary');
+  const headerRow = document.querySelector('.mdl-layout__header-row');
+  const secondaryHeader = document.querySelector('.mdl-layout__tab-bar');
+  const secondaryHeaderRight = document.querySelector('.mdl-layout__tab-bar-right-button');
+  const secondaryHeaderLeft = document.querySelector('.mdl-layout__tab-bar-button');
+  const mdlButtons = document.querySelectorAll('.mdl-button--raised.mdl-button--colored');
+
+  secondaryHeaderLeft.style.setProperty('background-color', 'rgba(18, 18, 18, 0.90)', 'important')
+  secondaryHeaderRight.style.setProperty('background-color', 'rgba(18, 18, 18, 0.90)', 'important')
+  secondaryHeader.style.setProperty('background-color', 'rgba(18, 18, 18, 0.90)', 'important')
+  headerRow.style.backgroundColor = '#121212';
+  
+  mainBody.style.background = 'rgba(18, 18, 18, 0.80)'
+
+  mdlButtons.forEach(button => {
+    button.style.backgroundColor = '#BB86FC';
+  });
+  mdlCards.forEach(card => {
+    card.style.backgroundColor = '#121212';
+  });
+  errors.forEach(error => {
+    error.style.color = "#BB86FC"
+  })
+  bodyTitles.forEach(title => {
+    title.style.setProperty('color', '#BB86FC', 'important');
+  });
+  headerTitles.forEach(title => {
+    title.style.setProperty('color', '#BB86FC', 'important');
+  });
+  primaryTitles.forEach(title => {
+    title.style.setProperty('color', '#BB86FC', 'important');
+  });
+}
+
 /**
  * Fix the details page
  * @param project the project
@@ -361,9 +401,10 @@ const fixMyEpitech = async () => {
         if (type !== types.DETAILS) {
           fixPercentage(projects);
           fixError(projects);
+          setDarkMode();
         }
         else
-            fixDetails(projects);
+          fixDetails(projects);
     } catch (e) {
         epiLog(e, "error");
     }
