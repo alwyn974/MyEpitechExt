@@ -287,6 +287,36 @@ const fixPercentage = (projects) => {
     }
 }
 
+const getErrors = (skills) => {
+  let error = 0;
+  Object.keys(skills).forEach(key => {
+    if (skills[key].passed === 0) {
+      error++;
+    }
+  });
+  return error;
+}
+
+const fixError = (projects) => {
+  let mdlGridSelector = document.querySelectorAll("main > div.mdl-grid");
+  if (mdlGridSelector.length === 0) {
+    epiLog("Mdl grid is empty !", "warn");
+    return;
+  }
+  let mdlGrid = mdlGridSelector[0];
+  if (mdlGrid.childNodes.length !== projects.length) {
+    epiLog("Card project are empty !", "warn");
+    return;
+  }
+  for (let i = 0; i < mdlGrid.childNodes.length; i++) {
+    let error = getErrors(projects[i].results.skills);
+    let secondaryContent = mdlGrid.childNodes[i].querySelector(".mdl-list__item-secondary-content");
+    if (secondaryContent) {
+      secondaryContent.textContent = error;
+    }
+  }
+}
+
 /**
  * Fix the details page
  * @param project the project
@@ -328,8 +358,10 @@ const fixMyEpitech = async () => {
         projects = type !== types.DETAILS ? projects.reverse() : projects;
         epiLog(projects, "json");
 
-        if (type !== types.DETAILS)
-            fixPercentage(projects);
+        if (type !== types.DETAILS) {
+          fixPercentage(projects);
+          fixError(projects);
+        }
         else
             fixDetails(projects);
     } catch (e) {
@@ -344,11 +376,11 @@ const fixMyEpitech = async () => {
  * @returns {Promise<void>}
  */
 const main = async () => {
-    if (window.location.href.includes("#")) {
-        epiLog("Loading MyEpitech extension...");
-        printLogo();
-        await fixMyEpitech();
-    }
+  if (window.location.href.includes("#")) {
+    epiLog("Loading MyEpitech extension...");
+    printLogo();
+    await fixMyEpitech();
+  }
 }
 
 /**
