@@ -1,16 +1,15 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "MyEpitech",
-  "version": "2.3",
+  "version": "2.4",
   "description": "Restore the old percentage of My Epitech !",
-  "permissions": [
+  "host_permissions": [
     "*://my.epitech.eu/*",
     "*://api.epitest.eu/*"
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {

@@ -1,5 +1,5 @@
 <div align="center">
-    <h1>Web Extension MyEpitech v2.3</h1>
+    <h1>Web Extension MyEpitech v2.4</h1>
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/hnkcafanoncncpkgboikhhikdomenepb?label=Stars&color=brightgreen&logo=googlechrome&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/users/hnkcafanoncncpkgboikhhikdomenepb?color=brightgreen&logo=googlechrome&style=for-the-badge)](https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb)
@@ -33,18 +33,18 @@
 	<li>
       Chrome
       <ul>
-        <li>Just add it to chrome from the <a href="https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb/related?hl=fr">store</a></li>
+        <li>Add it to chrome from the <a href="https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb/related?hl=fr">store</a></li>
       </ul>
     </li>
 	<li>Android
 		<ul>
-			<li> Install Kiwi Browser from the PlayStore or other store</li>
-			<li> And Just add it to chrome from the <a href="https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb/related?hl=fr">store</a></li>
+			<li>Install Kiwi Browser from the PlayStore or other store</li>
+			<li>And add it to Kiwi Browser from the <a href="https://chrome.google.com/webstore/detail/myepitech/hnkcafanoncncpkgboikhhikdomenepb/related?hl=fr">store</a></li>
 		</ul>
 	</li>
     <li>Firefox
 		<ul>
-            <li> Just add it to firefox from the <a href="https://addons.mozilla.org/en-GB/firefox/addon/myepitech/">store</a></li>
+            <li>Add it to firefox from the <a href="https://addons.mozilla.org/en-GB/firefox/addon/myepitech/">store</a></li>
 		</ul>
 	</li>
 </ul>
