@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MyEpitech",
-  "version": "2.4",
+  "version": "2.5",
   "description": "Restore the old percentage of My Epitech !",
   "host_permissions": [
     "*://myresults.epitest.eu/*",
