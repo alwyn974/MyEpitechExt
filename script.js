@@ -311,7 +311,7 @@ const fixDetails = (project) => {
  * @returns {Promise<void>}
  */
 const fixMyEpitech = async () => {
-    epiLog("Finish patching my.epitech.eu", "timeStart");
+    epiLog("Finish patching myresults.epitest.eu", "timeStart");
     while (!checkGrid()) {
         if (checkNoResult()) {
             epiLog("No results found !");
@@ -336,7 +336,7 @@ const fixMyEpitech = async () => {
         epiLog(e, "error");
     }
     hasBeenFixed = false;
-    epiLog("Finish patching my.epitech.eu", "timeEnd");
+    epiLog("Finish patching myresults.epitest.eu", "timeEnd");
 }
 
 /**

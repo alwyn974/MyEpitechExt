@@ -4,7 +4,7 @@
   "version": "2.4",
   "description": "Restore the old percentage of My Epitech !",
   "host_permissions": [
-    "*://my.epitech.eu/*",
+    "*://myresults.epitest.eu/*",
     "*://api.epitest.eu/*"
   ],
   "background": {
@@ -17,7 +17,7 @@
         "script.js"
       ],
       "matches": [
-        "*://my.epitech.eu/*"
+        "*://myresults.epitest.eu/*"
       ]
     }
   ],
