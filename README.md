@@ -6,7 +6,7 @@
 ![Mozilla Add-on](https://img.shields.io/amo/users/myepitech?color=brightgreen&logo=firefox&style=for-the-badge)
 [![](https://img.shields.io/badge/License-GPL--3.0-brightgreen.svg?style=for-the-badge)](https://github.com/alwyn974/MyEpitechExt/blob/main/LICENSE)
 
-<br><strong> Restore the old design of https://my.epitech.eu </strong></p>
+<br><strong> Restore the old design of https://myresults.epitest.eu </strong></p>
 
 </div>
 
