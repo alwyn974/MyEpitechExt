@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "MyEpitech",
+  "version": "2.5",
+  "description": "Restore the old percentage of My Epitech !",
+  "host_permissions": [
+    "*://myresults.epitest.eu/*",
+    "*://api.epitest.eu/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{02c925e8-788c-4e0c-9178-cdde9ca87c7d}"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "script.js"
+      ],
+      "matches": [
+        "*://myresults.epitest.eu/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "64": "icon.png",
+    "128": "icon.png"
+  }
+}
